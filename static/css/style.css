@@ -1,0 +1,144 @@
+:root{
+  --bg: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --shadow: 0 10px 28px rgba(17,24,39,0.08);
+  --radius: 14px;
+}
+
+*{ box-sizing: border-box; }
+html, body { height: 100%; }
+body{
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--text);
+}
+
+.page{
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+
+.header{
+  padding: 18px 18px 14px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, #fff, #fbfbfd);
+  box-shadow: var(--shadow);
+}
+
+h1{
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+.subtitle{
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.tableWrap{
+  margin-top: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+.demoTable{
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.demoTable thead th{
+  position: sticky;
+  top: 0;
+  background: #fcfcff;
+  z-index: 1;
+  text-align: left;
+  font-size: 13px;
+  color: #374151;
+  padding: 14px 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.demoTable tbody td{
+  padding: 14px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+}
+
+.demoTable tbody tr:hover td{
+  background: #fafafa;
+}
+
+.colDataset{ width: 220px; }
+.colMethod{ width: calc((100% - 220px)/4); }
+
+.datasetTitle{
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.datasetName{
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+}
+
+.cell{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 180px;
+}
+
+audio{
+  width: 100%;
+  height: 34px;
+}
+
+.badge{
+  display: inline-flex;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: #f9fafb;
+  border: 1px solid var(--line);
+  color: #374151;
+  width: fit-content;
+}
+
+.missing{
+  color: #b91c1c;
+  background: #fff1f2;
+  border-color: #fecdd3;
+}
+
+@media (max-width: 920px){
+  .colDataset{ width: 160px; }
+  audio{ height: 32px; }
+}
+
+@media (max-width: 760px){
+  .demoTable thead{ display: none; }
+  .demoTable, .demoTable tbody, .demoTable tr, .demoTable td{
+    display: block;
+    width: 100%;
+  }
+  .demoTable tbody td{
+    border-bottom: none;
+    padding: 12px 14px;
+  }
+  .demoTable tbody tr{
+    border-bottom: 1px solid var(--line);
+  }
+  .cell{ min-width: unset; }
+}

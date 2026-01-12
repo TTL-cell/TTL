@@ -1,0 +1,53 @@
+{
+  "baseAudioDir": "static/audio",
+  "datasets": [
+    {
+      "id": "aishell-3",
+      "label": "aishell-3",
+      "samples": [
+        "AISHELL-3_0000000009.wav"
+      ]
+    },
+    {
+      "id": "en",
+      "label": "en",
+      "samples": [
+        "common_voice_en_9559-common_voice_en_9560.wav"
+      ]
+    },
+    {
+      "id": "libritts",
+      "label": "libritts",
+      "samples": [
+        "121_127105_000000_000000.wav"
+      ]
+    },
+    {
+      "id": "vctk",
+      "label": "vctk",
+      "samples": [
+        "VCTK_0000003433.wav"
+      ]
+    },
+    {
+      "id": "zh",
+      "label": "zh",
+      "samples": [
+        "00004501-00000111.wav"
+      ]
+    },
+    {
+      "id": "zh_hard",
+      "label": "zh_hard",
+      "samples": [
+        "00004507-00000024.wav"
+      ]
+    }
+  ],
+  "methods": [
+    "GT",
+    "baseline",
+    "phoneme",
+    "TTL"
+  ]
+}

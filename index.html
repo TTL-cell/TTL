@@ -1,323 +1,38 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>3DGS DIET</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
-
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
-  <script src="./static/js/script.js"></script>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zero-shot TTS Demo</title>
+  <link rel="stylesheet" href="static/css/style.css" />
 </head>
-
 <body>
-  <!--Title-->
-  <section class="hero">
-    <div class="hero-body" style="padding-bottom: 0;">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title poppins-bold">🥗 3DGS 다이어트</h1>
-            <div class="is-size-5 publication-authors">
-              <span class="author-block poppins-light ">
-                <a href="https://github.com/dusruddl2">Yeonkyung Lee</a><sup>1*</sup>,</span>
-              <span class="author-block poppins-light ">
-                <a href="https://github.com/tjdmstj">Eunseo Seo</a><sup>2*</sup>,</span>
-              <span class="author-block poppins-light ">
-                <a href="https://github.com/yeonyeonn">Dayeon Woo</a><sup>3*</sup>,</span>
-              <span class="author-block poppins-light ">
-                <a href="https://github.com/chechae">Chehun Han</a><sup>4*</sup>, and </span>
-              <span class="author-block poppins-light ">
-                <a href="https://github.com/jcg6074">Changgyun Jin</a><sup>5&dagger;*</sup></span>
-            </div>
-
-            <div class="is-size-5 publication-authors">
-              <span class="author-block poppins-light "><sup>1</sup>Sejong University</span>&emsp;
-              <span class="author-block poppins-light "><sup>2</sup>Chungang University</span>&emsp;
-              <span class="author-block poppins-light "><sup>3</sup>Sungkyunkwan University</span>&emsp;
-              <span class="author-block poppins-light "><sup>4</sup>Ewha Womans University</span>&emsp;
-              <span class="author-block poppins-light "><sup>5</sup>Seoul National University of Science & Technology</span><br>
-              <span class="poppins-extrabold" ><sup>*</sup><a href="https://deepdaiv.oopy.io/"><span style="color : #264a8e;">deep daiv.</span></a></span>&emsp;
-              <span class="author-block poppins-light "><sup>&dagger;</sup>Project Lead</span>&emsp;
-            </div>
-            <div class="column has-text-centered">
-                <span class="link-block">
-                  <a href="https://github.com/deep-daiv-Computer-Vision/3DGS_DIET"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span class="poppins-light " >Code</span>
-                  </a>
-                  <a href="https://deepdaiv.notion.site/3DGS-85fdfd776ff34f5f8944892e503a116d?pvs=4" 
-                    class="external-link button is-normal is-rounded">
-                    <span class="icon">
-                      <i class="fas fa-file"></i>
-                    </span>
-                    <span class="poppins-light ">Project Detail</span>
-                  </a>
-                  <a href = "https://www-dbpia-co-kr.proxy.cau.ac.kr/journal/articleDetail?nodeId=NODE12036451" class="external-link button is-normal is-rounded">
-                    <span class="icon">
-                      <i class="fas fa-file"></i>
-                    </span>
-                    <span class="poppins-light ">Paper</span>
-                  </a>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <header class="page">
+    <div class="header">
+      <h1>Zero-shot TTS Demo</h1>
+      <p class="subtitle">
+        Compare audio across different sampling methods: <b>GT</b>, <b>baseline</b>, <b>phoneme</b>, <b>TTL</b>
+      </p>
     </div>
-  </section>
+  </header>
 
-  <!-- Motivation-->
-  <br>
-  <br>
-  <br>
-  <section class="section" style="padding: 30px;">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths ">
-          <h2 class="title is-3 poppins-semibold" style="color : #264a8e;">Motivation</h2>
-          <p class="poppins-light " style = "font-size:20px;">
-            MLP 기반의 NeRF모델과 달리 point cloud 기반의 3DGS 모델은 <br>
-            저장해야 하는 파라미터 수가 많기 때문에 메모리 사용량이 높다. <br>
-            퀄리티를 유지하면서 메모리를 줄여보자!
-          </p>
-          <br>
-          <img src="static/images/motivation1_3dgs.png" style="width:100%;">
-          <img src="static/images/motivation2_3dgs.png" style="width:100%; padding-top: 10%;">
-        </div>
-      </div>
+  <main class="page">
+    <section class="tableWrap">
+      <table class="demoTable" id="demoTable">
+        <thead>
+          <tr>
+            <th class="colDataset">Dataset</th>
+            <th class="colMethod">GT</th>
+            <th class="colMethod">baseline</th>
+            <th class="colMethod">phoneme</th>
+            <th class="colMethod">TTL</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </section>
+  </main>
 
-    </div>
-  </section>
-
-
-  <!--Pipeline-->
-  <hr style="border : 0; height: 3px;"> 
-  <section class="section" style="padding: 30px;">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3 poppins-semibold" style="color : #264a8e;">Pipeline</h2>
-          <img src="static/images/pipeline_3dgs.png" style="width:100%;">
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!--Method-->
-  <hr style="border : 0; height: 3px;"> 
-  <section class="section" style="padding: 30px;">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3 poppins-semibold" style="color : #264a8e;">Method</h2>
-          <p class="poppins-light" style = "font-size:20px;">
-            비슷한 속성의 가우시안들을 클러스팅하여 하나의 큰 가우시안으로 만들자.<br>
-            본 메소드는 가우시안 수를 줄임으로써 메모리 사용량을 줄일 수 있다.
-          </p>
-          <img src="static/images/ideation_3dgs.png" style="width:90%;">
-          <h3 class="subtitle highlight" style="display: block;"> DBSCAN Clustering</h3>
-          <img src="static/images/method1_3dgs.png" style="width:100%; padding-top: 5%; padding-bottom: 10%;">
-          <p class="poppins-light" style = "font-size:20px;">
-            클러스터 속 여러 가우시안들을 하나의 큰 가우시안으로 정의할 때<br>
-            가우시안끼리 비슷한 값을 갖는 Position과 Color는 평균값으로, <br>
-            Opacity는 pruning 과정에서 제거되지 않기 위해 최댓값으로 설정한다.
-          </p>
-          <img src="static/images/method2_3dgs.png" style="width:100%; padding-top: 10%; ">
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!--Result-->
-  <hr style="border : 0; height: 3px;"> 
-  <section class="section" style="padding: 30px;">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3 poppins-semibold" style="color : #264a8e;">Result</h2>
-          <p class="poppins-light" style = "font-size:20px; padding-bottom: 10%;">
-            dbscan을 3번 이용한 방식은 DBSCAN_thrice와 3DGS를 비교했을 때 <br>
-            가우시안 수는 약 20만개가 줄었고, 메모리 또한 약 50MB가 줄었다.
-          </p>
-
-          <h3 class="subtitle highlight" style="display: block;"> 정량적 평가(3DGS vs DBSCAN_3)</h3> 
-          <img src="static/images/result1_3dgs.png" style="width:100%; padding-top: 5%; padding-bottom: 10%;">
-          <h3 class="subtitle highlight" style="display: block;"> 정성적 평가(3DGS vs DBSCAN_3)</h3> 
-          <img src="static/images/result2_3dgs.png" style="width:100%; padding-top: 5%; padding-bottom: 10%;">
-          <!--Comparison-->  
-          <div>
-            <div class="columns is-centered">
-              <div class="column">
-                <div class="content">
-                  <div class="columns is-centered">
-                    <div class="column is-full-width">
-                      <!--3DGS vs DBSCAN-->  
-                      <div id="example1" class="bal-container-small" style="padding-bottom: 10%;">
-                        <div class="bal-after">
-                          <img id='img_input1' src="./static/images/comparsion/3dgs_d.png">
-                          <div id ='right_img' class="bal-afterPosition afterLabel" style="z-index:1;">
-                            Ours
-                          </div>
-                        </div>
-                        <div class="bal-before" style="width:96.4968152866242%;">
-                          <div class="bal-before-inset" style="width: 539px;">
-                            <img id='img_input2' src="./static/images/comparsion/3dgs.png">
-                            <div id ='left_img' class="bal-beforePosition beforeLabel">
-                              3DGS
-                            </div>
-                          </div>
-                        </div>
-                        <div class="bal-handle" style="left:96.4968152866242%;">
-                          <span class="handle-left-arrow"></span>
-                          <span class="handle-right-arrow"></span>
-                        </div>
-                      </div>
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-            <div class ="example-select" style="display: flex; justify-content: center; gap: 50px; padding-bottom: 30px; width: 100%;">
-              <!--3dgs_d vs 3dgs-->
-              <div>
-                <a class = "example-item" onclick="changeExample_db_gs('./static/images/comparsion/3dgs_d.png','./static/images/comparsion/3dgs.png')">
-                  <img src="./static/images/comparsion/3dgs_d.png">
-                </a>  
-                <span  class="poppins-bold" style="color : #264a8e;">3DGS vs Ours</span>
-              </div>
-              <!--gt vs 3dgs_d-->
-              <div>
-                <a class = "example-item" onclick="changeExample_gt_db('./static/images/comparsion/3dgs_d.png','./static/images/comparsion/gt.png')">
-                  <img src="./static/images/comparsion/gt.png">
-                </a>
-                <span class="poppins-bold" style="color : #264a8e;">GT vs Ours</span>
-              </div>
-              <!--gt vs 3dgs-->
-              <div>
-                <a class = "example-item" onclick="changeExample_gt_gs('./static/images/comparsion/3dgs.png','./static/images/comparsion/gt.png')">
-                  <img src="./static/images/comparsion/gt.png">
-                </a>
-                <span  class="poppins-bold" style="color : #264a8e;">GT vs 3DGS</span>
-              </div>
-            </div>
-            <!--시현 영상-->
-            <div class="hero-body" id="main-slider">
-              <div class="container">
-                <div align="center">
-                  <video poster="" autoplay controls muted loop playsinline preload="auto" style="width:100%; height: auto;">
-                    <source src="./static/videos/result.mp4" type="video/mp4">
-                  </video>
-                </div>
-              </div>
-            </div>
-            <!--iteration 비교-->
-            <div class="hero-body" id="main-slider">
-              <div class="container">
-                <div align="center">
-                  <h3 class="subtitle highlight" style="display: block;"> Iteration별 Rendering 비교</h3> 
-                  <img id='img_input2' src="./static/images/result3_3dgs.png" style = "width: 100%; height: auto; padding-top: 10%;">
-                </div>
-              </div>
-            </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    new BeforeAfter({
-      id: '#example1'
-    });
-    new BeforeAfter({
-      id: '#example2'
-    });
-    // new BeforeAfter({
-    //   id: '#example3'
-    // });
-    // new BeforeAfter({
-    //   id: '#example4'
-    // });
-    // new BeforeAfter({
-    //   id: '#example5'
-    // });
-    // new BeforeAfter({
-    //   id: '#example6'
-    // });
-
-  </script>
-  
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title poppins-semibold">Citations</h2>
-    <pre><code>
-      @Article{kerbl3Dgaussians,
-        author       = {Kerbl, Bernhard and Kopanas, Georgios and Leimk{\"u}hler, Thomas and Drettakis, George},
-        title        = {3D Gaussian Splatting for Real-Time Radiance Field Rendering},
-        journal      = {ACM Transactions on Graphics},
-        number       = {4},
-        volume       = {42},
-        month        = {July},
-        year         = {2023},
-        url          = {https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/}
-       }
-    </code></pre>
-  </div>
-</section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
-            <p>
-              This website borrowed template from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
+  <script src="static/js/app.js"></script>
 </body>
-
 </html>
