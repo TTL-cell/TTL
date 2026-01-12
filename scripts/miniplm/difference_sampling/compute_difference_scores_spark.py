@@ -10,14 +10,6 @@ import random
 import json
 from transformers import AutoTokenizer
 
-'''
-python scripts/miniplm/difference_sampling/compute_difference_scores_spark.py \
-    --teacher-score-dir results_miniplm/pt_lm_infer/voxbox/smollm2_1.7B_codec_teacher \
-    --ref-score-dir results_miniplm/pt_lm_infer/voxbox/smollm2_135M_codec_ref \  
-    --data-path processed_data_no_chunk/pretrain_train_em_network/llama-1500 \
-    --model-path /data/esseo/DB/TTS/tokenizer/smoll2-1.7b-teacher/tokenizer/ \
-    --output-dir results_miniplm/pt_lm_infer/voxbox/diff_1.7B_135M_codec
-'''
 
 # MiniPLM 경로 추가 (필요시 수정)
 sys.path.append(os.getcwd())

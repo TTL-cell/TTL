@@ -8,17 +8,6 @@ import json
 from transformers import AutoTokenizer
 from tqdm import tqdm
 
-'''
-Usage Example (Bottom 6.25% Selection):
-python scripts/miniplm/difference_sampling/construct_pretrain_data_with_metadata_diff_ratio_lang.py \
-    --model-path /data/esseo/DB/TTS/tokenizer/smoll2-1.7b-teacher/tokenizer/ \
-    --data-path processed_data_no_chunk/pretrain_train_em_network/llama-1500 \
-    --score-path results_miniplm/pt_lm_infer/voxbox/diff_1.7B_135M_codec/diff_scores.pt \
-    --output-dir processed_data_no_chunk/pretrain_train_em_network/diff_1.7B_135M_codec_bottom_r0.125_en0.625_zh0.625/llama-1500 \
-    --ratio 0.125 \
-    --lang-dist "en:0.5,zh:0.5" \
-    --select-mode bottom
-'''
 
 sys.path.append(os.getcwd())
 # MiniPLM 유틸리티 로드
