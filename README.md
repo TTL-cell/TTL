@@ -1,6 +1,6 @@
 # TTL : Language-balanced Data Selection for LLM-based Text-to-Speech via Codec Token Scoring
 
-
+<a href="https://ttl-cell.github.io/TTL/"><img src="https://img.shields.io/badge/Demo-Page-lightgrey" alt="version"></a>
 <img src="figures/method.png"></img>
 
 
