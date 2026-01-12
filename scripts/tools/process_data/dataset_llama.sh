@@ -4,7 +4,7 @@ BASE_PATH=$1
 #  tokenize_vox_llama_metajsonl.py -> wav_path.jsonl 저절로 생성됨
 
 export PYTHONPATH=${BASE_PATH}
-python3 tools/process_data/tokenize_vox_llama_metajsonl.py \
+python3 tools/process_data/tokenize_llama_metajsonl.py \
     --base-path $BASE_PATH \
     --model-path /data/esseo/DB/TTS/tokenizer/smoll2-135m-ref/tokenizer \
     --data-dir data/voxbox/train \
