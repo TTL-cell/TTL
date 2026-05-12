@@ -4,20 +4,15 @@ from tqdm import tqdm
 import json
 from datasets import DatasetDict
 
-'''
-train_file = "/data/esseo/DB/TTS/voxbox_subset/voxbox_train_zh.jsonl"
-val_file   = "/data/esseo/DB/TTS/voxbox_subset/voxbox_val_zh.jsonl"
-'''
-
-train_files = "/data/esseo/DB/TTS/voxbox_subset/voxbox_train.jsonl"
-test_files = "/data/esseo/DB/TTS/voxbox_subset/voxbox_val.jsonl"
+train_files = ""
+test_files = ""
 data = datasets.load_dataset(
     "json",
     data_files={
         "train": train_files,
         "val":test_files
         },
-    split=None  # -> DatasetDict 반환
+    split=None  
 )
 print(data)
 
