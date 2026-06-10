@@ -1,4 +1,4 @@
-const METHODS_FALLBACK = ["GT", "baseline", "phoneme", "TTL"];
+const METHODS_FALLBACK = ["GT", "Random", "Phoneme", "MiniPLM", "TTL"];
 const AUDIO_EXTS = [".wav", ".mp3", ".flac", ".m4a", ".ogg", ".aac"];
 
 function el(tag, attrs = {}, children = []) {
