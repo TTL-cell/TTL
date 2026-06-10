@@ -1,5 +1,5 @@
 {
-  "baseAudioDir": "static/audio",
+  "baseAudioDir": "static/data",
   "datasets": [
     {
       "id": "AISHELL",
