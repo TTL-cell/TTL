@@ -2,52 +2,53 @@
   "baseAudioDir": "static/audio",
   "datasets": [
     {
-      "id": "aishell-3",
-      "label": "aishell-3",
+      "id": "AISHELL",
+      "label": "AISHELL",
       "samples": [
-        "AISHELL-3_0000000009.wav"
+        "AISHELL-3_0000000778.wav"
       ]
     },
     {
-      "id": "en",
-      "label": "en",
+      "id": "EN",
+      "label": "EN",
       "samples": [
-        "common_voice_en_9559-common_voice_en_9560.wav"
+        "common_voice_en_17263752-common_voice_en_17263750.wav"
       ]
     },
     {
-      "id": "libritts",
-      "label": "libritts",
+      "id": "Libritts",
+      "label": "Libritts",
       "samples": [
-        "121_127105_000000_000000.wav"
+        "4970_29095_000007_000000.wav"
       ]
     },
     {
-      "id": "vctk",
-      "label": "vctk",
+      "id": "VCTK",
+      "label": "VCTK",
       "samples": [
-        "VCTK_0000003433.wav"
+        "VCTK_0000003441.wav"
       ]
     },
     {
-      "id": "zh",
-      "label": "zh",
+      "id": "ZH",
+      "label": "ZH",
       "samples": [
-        "00004501-00000111.wav"
+        "00005541-00000076.wav"
       ]
     },
     {
-      "id": "zh_hard",
-      "label": "zh_hard",
+      "id": "ZH_HARD",
+      "label": "ZH_HARD",
       "samples": [
-        "00004507-00000024.wav"
+        "00012577-00000019.wav"
       ]
     }
   ],
   "methods": [
     "GT",
-    "baseline",
-    "phoneme",
+    "Random",
+    "Phoneme",
+    "MiniPLM",
     "TTL"
   ]
 }
